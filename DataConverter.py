@@ -7,9 +7,6 @@ import csv
 h = httplib2.Http('.cache')
 response, content = h.request('https://jsonplaceholder.typicode.com/posts')
 data = json.loads(content)
-print (data[0])
-
-print(data[0]["userId"])
 
 for x in data:
     with open('users.csv', mode='a', encoding='utf-8') as csvfile:
